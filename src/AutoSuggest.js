@@ -5,10 +5,12 @@ import * as R from "ramda";
 const useDebounced = (fn, time) => {
   const [timer, setTimer] = useState(null);
 
-  return textValue => {
-    clearTimeout(timer);
-    setTimer(setTimeout(() => fn(textValue), time));
-  };
+  return R.compose(
+    setTimer,
+    f => setTimeout(f, time),
+    R.thunkify(fn),
+    R.tap(() => clearTimeout(timer))
+  );
 };
 
 const focusFnHOC = (focusFn, updateFocus) =>

@@ -1,0 +1,44 @@
+{
+  "name": "react-text-autosuggest",
+  "version": "0.0.1",
+  "description": "Dead simple text based auto-suggest",
+  "main": "dist/autosuggest.js",
+  "module": "dist/autosuggest.es.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env rollup -c",
+    "precommit": "cross-env lint-staged && npm run test",
+    "prepare": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [
+    "react",
+    "autosuggest",
+    "autocomplete",
+    "typeahead"
+  ],
+  "author": "Ritesh P",
+  "license": "MIT",
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "ramda": "^0.26.1",
+    "react": "^16.7.0-alpha",
+    "react-dom": "^16.7.0-alpha"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^4.0.9",
+    "@storybook/addon-links": "^4.0.9",
+    "@storybook/addons": "^4.0.9",
+    "@storybook/react": "^4.0.9",
+    "babel-loader": "^8.0.4",
+    "babelrc-rollup": "^3.0.0",
+    "cross-env": "^5.2.0",
+    "rollup": "^0.67.3",
+    "rollup-plugin-babel": "^4.0.3"
+  }
+}

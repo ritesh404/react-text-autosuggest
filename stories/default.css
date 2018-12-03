@@ -1,0 +1,24 @@
+.autosuggest-container {
+  display: inline-block;
+  position: relative;
+  width: 400px;
+}
+.autosuggest-input {
+  font-size: 22px;
+  width: 100%;
+}
+.autosuggest-option-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+}
+.autosuggest-option {
+  border: 1px solid #e9e9e9;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.autosuggest-option:hover {
+  background-color: #e9e9;
+}
